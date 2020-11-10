@@ -9,10 +9,10 @@
           <%= image_tag "ART00050817001.jpg", alt: "surfboard", width: 200 %>
         </div>
       <% end %>
-    <% end %>
     <div class="card-bottom">
-      <h4><b>Awesome Board</b></h4>
-      <p>Board for pros.</p>
+      <h4><b><%= surfboard.model %></b></h4>
+      <p><%= surfboard.size %> - €<%= surfboard.price %></p>
     </div>
+    <% end %>
   </div>
 <% end %>
