@@ -1,0 +1,12 @@
+<h2> 🏄 New Surfboard 🏄 </h2>
+
+<div>
+<%= simple_form_for @surfboard do |f| %>
+<%= f.input :model, input_html: { autocomplete: "off"} %>
+<%= f.input :price, input_html: { autocomplete: "off"} %>
+<%= f.input :description, input_html: { autocomplete: "off"} %>
+<%= f.input :size, input_html: { autocomplete: "off"} %>
+<%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
+<%= f.submit class: 'btn btn-primary' %>
+<% end %>
+</div>
