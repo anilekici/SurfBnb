@@ -1,0 +1,7 @@
+<ul>
+<% @surfboards.each do |surfboard| %>
+  <li>
+    <%= link_to surfboard.model, surfboard_path(surfboard) %>
+  </li>
+<% end %>
+</ul>
