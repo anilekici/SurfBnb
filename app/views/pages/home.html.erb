@@ -1,2 +1,36 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<h1>nav bar nav bar nav bar nav bar</h1>
+<h2>Surf Boards</h2>
+<div class="container">
+   <%# render 'card' %>
+  <div class="card">
+  <%= link_to root_path do %>
+    <div class="card-img">
+      <%= image_tag "ART00050817001.jpg", alt: "surfboard", width: 200 %>
+    </div>
+    <div class="card-bottom">
+      <h4><b>Awesome Board</b></h4> 
+      <p>Board for pros.</p> 
+    </div>
+  <% end %>
+  </div>
+  <div class="card">
+  <%= link_to root_path do %>
+    <div class="card-img">
+      <%= image_tag "aa0bo0179_rdtw_1.jpg", alt: "surfboard", width: 200 %>
+    </div>
+    <div class="card-bottom">
+      <h4><b>Awesome Board</b></h4> 
+      <p>Board for kooks.</p> 
+    </div>
+  <% end %>
+  </div>
+  <div class="card">
+  <%= link_to root_path do %>
+    <%= image_tag "ART00050817001.jpg", alt: "surfboard", width: 200 %>
+    <div class="card-bottom">
+      <h4><b>Awesome Board</b></h4> 
+      <p>Board for pros.</p> 
+    </div>
+    <% end %>
+  </div>
+</div>
