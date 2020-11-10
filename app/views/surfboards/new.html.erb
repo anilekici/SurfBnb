@@ -6,6 +6,7 @@
 <%= f.input :price, input_html: { autocomplete: "off"} %>
 <%= f.input :description, input_html: { autocomplete: "off"} %>
 <%= f.input :size, input_html: { autocomplete: "off"} %>
+<%= f.input :photo, as: :file %>
 <%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
 <%= f.submit class: 'btn btn-primary' %>
 <% end %>
