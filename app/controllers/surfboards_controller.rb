@@ -27,6 +27,9 @@ class SurfboardsController < ApplicationController
 
   #destroy
   def destroy
+    @surfboard = Surfboard.find(params[:id])
+    @surfboard.destroy
+    redirect_to surfboards_path
   end
 
   private
