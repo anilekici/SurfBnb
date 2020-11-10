@@ -6,7 +6,7 @@ class SurfboardsController < ApplicationController
 
   #show
   def show
-    @surfboard = Surfboard.find.(params[:id])
+    @surfboard = Surfboard.find(params[:id])
   end
 
   #new
@@ -16,12 +16,13 @@ class SurfboardsController < ApplicationController
 
   #create
   def create
-    @surfboard = Surfboard.find(surfboards_params[:id])
-      if @surfboards.save
-        redirect_to surfboards_path(@surfboard), notice: "Surfboard #{@surfboard.model} is on the menu"
-      else
-        render :new
-      end
+    @surfboard = Surfboard.new(surfboards_params)
+    @surfboard.user = current_user
+    if @surfboard.save
+      redirect_to surfboards_path(@surfboard), notice: "Surfboard #{@surfboard.model} has been added"
+    else
+      render :new
+    end
   end
 
   #destroy
@@ -31,7 +32,7 @@ class SurfboardsController < ApplicationController
   private
 
   def surfboards_params
-    params.require(:surfboard).permit(:model, :price, :owner_id)
+    params.require(:surfboard).permit(:model, :price, :size, :description, :owner_id, :photo)
   end
 
 end

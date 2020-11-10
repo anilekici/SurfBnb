@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  
   def new
     @booking = Booking.new
   end
@@ -27,4 +28,5 @@ def destroy
   def booking_params
     params.require(:booking).permit(:description, :booking_id)
   end
+
 end
