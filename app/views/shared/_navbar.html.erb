@@ -19,8 +19,13 @@
           What do you whant to do?
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Rent a board</a>
-          <a class="dropdown-item" href="#">Share a board</a>
+        <%= link_to surfboards_path do %>
+          <div class="dropdown-item">Rent a board</div>
+        <% end %>
+        <%= link_to new_surfboard_path do %>
+
+          <div class="dropdown-item">Share a board</div>
+          <% end %>
           <%# <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Offer </a> %>
         </div>
