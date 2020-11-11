@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 
-.home_video {
+.home_photo {
     width: 100vw;
     position: absolute;
     object-fit: cover;
@@ -9,24 +9,21 @@
     margin: auto;
 }
 
-.video-card h2, h4 {
+.photo-card h2, p {
     text-align: center;
     color: white;
     margin-top: 10%;
 }
-.video-card a {
+.photo-card a {
     text-decoration: none;
     color: white;
-    background-color: mediumaquamarine;
+    background-color: rgb(231, 86, 142);
     padding: 10px;
-    opacity: 0.5;
+    opacity: 0.8;
     border-radius: 4px;
 }
-.video-card a:hover {
-    opacity: 0.8;
-}
 
-.video-card {
+.photo-card {
     height: 80vh;
 }
 .container {
@@ -36,4 +33,8 @@
 .show-list img {
     height: 350px;
     width: 200px;
+}
+
+.container {
+    text-align: center;
 }
