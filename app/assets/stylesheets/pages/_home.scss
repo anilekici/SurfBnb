@@ -1,11 +1,12 @@
 // Specific CSS for your home-page
+
 .home_video {
     width: 100vw;
-    height: 100vh;
     position: absolute;
     object-fit: cover;
-    top: 0;
+    top: 66px;
     z-index: -2;
+    margin: auto;
 }
 
 .video-card h2, h4 {
@@ -23,4 +24,8 @@
 }
 .video-card a:hover {
     opacity: 0.8;
+}
+
+.video-card {
+    height: 80vh;
 }
