@@ -1,6 +1,7 @@
 <h2> 🏄 New Surfboard 🏄 </h2>
 
 <div class="container">
+<%= simple_form_for @surfboard do |f| %>
 <%= f.input :model, placeholder: "longboard", input_html: { autocomplete: "off"} %>
 <%= f.input :description, placeholder: "Name, colour, volume, conditions...", input_html: { autocomplete: "off"} %>
 <%= f.input :size, placeholder: "6ft 10 x 21.5 x 2.75", input_html: { autocomplete: "off"} %>
