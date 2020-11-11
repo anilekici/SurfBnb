@@ -29,3 +29,7 @@
 .video-card {
     height: 80vh;
 }
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+}
