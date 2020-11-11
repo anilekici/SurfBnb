@@ -16,28 +16,13 @@ class BookingsController < ApplicationController
     end
   end
 
-end
-
-def destroy
-  @booking = Booking.find(params[:id])
-  @booking.destroy
-  redirect_to surfboard_path(@booking.surfboard), alert: 'booking canceled'
-end
-
-    private
-
-
   def destroy
     @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to surfboard_path(@booking.surfboard), alert: 'bookig canceled!'
+    redirect_to surfboard_path(@booking.surfboard), alert: 'booking canceled'
   end
 
   private
-
-  # def set_surfboard
-  #   @surfboard = Surfboard.find(params[:surfboard_id])
-  # end
 
   def booking_params
     params.require(:booking).permit(:users_id, :booking_id)
