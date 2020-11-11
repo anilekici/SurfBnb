@@ -1,5 +1,5 @@
 class BookingsController < ApplicationController
-  
+
   def new
     @booking = Booking.new
   end
@@ -18,7 +18,9 @@ end
 def destroy
   @booking = Booking.find(params[:id])
   @booking.destroy
-  redirect_to surfboard_path(@booking.surfboard), alert: 'bookig canceled'
+  redirect_to surfboard_path(@booking.surfboard), alert: 'booking canceled'
+end
+
     private
 
   def set_surfboard
