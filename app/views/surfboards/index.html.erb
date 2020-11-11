@@ -1,38 +1,7 @@
-<h2>Surf Boards</h2>
+<div class="mini-nav">
+  <h2>Surf Boards</h2>
+  <p><%= link_to "Add Your Surfboard", new_surfboard_path %></p>
+</div>
 <div class="container">
-  <% @surfboards.each do |surfboard| %>
-    <%= render 'shared/card', surfboard: surfboard %>
-  <% end %>
-
-  <div class="card">
-  <%= link_to root_path do %>
-    <div class="card-img">
-      <%= image_tag "ART00050817001.jpg", alt: "surfboard", width: 200 %>
-    </div>
-    <div class="card-bottom">
-      <h4><b>Awesome Board</b></h4>
-      <p>Board for pros.</p>
-    </div>
-  <% end %>
-  </div>
-  <div class="card">
-  <%= link_to root_path do %>
-    <div class="card-img">
-      <%= image_tag "aa0bo0179_rdtw_1.jpg", alt: "surfboard", width: 200 %>
-    </div>
-    <div class="card-bottom">
-      <h4><b>Awesome Board</b></h4>
-      <p>Board for kooks.</p>
-    </div>
-  <% end %>
-  </div>
-  <div class="card">
-  <%= link_to root_path do %>
-    <%= image_tag "ART00050817001.jpg", alt: "surfboard", width: 200 %>
-    <div class="card-bottom">
-      <h4><b>Awesome Board</b></h4>
-      <p>Board for pros.</p>
-    </div>
-    <% end %>
-  </div>
+  <%= render 'shared/card' %>
 </div>

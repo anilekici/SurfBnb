@@ -1,6 +1,18 @@
+<% @surfboards.each do |surfboard| %>  
   <div class="card">
     <%= link_to surfboard_path(surfboard) do %>
       <% if surfboard.photo.attached? %>
-        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path surfboard.photo.key, height: 400, width: 200, crop: :fill %>')">
+        <div class="card-img" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path surfboard.photo.key, height: 250, width: 150, crop: :fill %>')">
         </div>
-      
+      <% else %>
+       <div class="card-img">
+          <%= image_tag "ART00050817001.jpg", alt: "surfboard", height: 250, width: 144 %>
+        </div>
+      <% end %>
+    <div class="card-bottom">
+      <h6><b><%= surfboard.model %></b></h6>
+      <p><%= surfboard.size %> - €<%= surfboard.price %></p>
+    </div>
+    <% end %>
+  </div>
+<% end %>

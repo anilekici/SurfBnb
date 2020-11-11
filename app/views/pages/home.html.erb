@@ -1,2 +1,5 @@
-<h1>LANDING PAGE</h1>
-
+<div class="video-card">
+  <%= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
+  <h2>Welcome to SurfBnb!</h2>
+  <h4><%= link_to "Explore Surfboards", surfboards_path %></h4>
+</div>

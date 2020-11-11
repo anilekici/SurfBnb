@@ -1,9 +1,26 @@
 // Specific CSS for your home-page
-.container {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+.home_video {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    object-fit: cover;
+    top: 0;
+    z-index: -2;
 }
-body {
+
+.video-card h2, h4 {
     text-align: center;
+    color: white;
+    margin-top: 10%;
+}
+.video-card a {
+    text-decoration: none;
+    color: white;
+    background-color: mediumaquamarine;
+    padding: 10px;
+    opacity: 0.5;
+    border-radius: 4px;
+}
+.video-card a:hover {
+    opacity: 0.8;
 }
