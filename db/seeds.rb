@@ -24,7 +24,7 @@ end
 puts "creating surfboards"
 20.times do
   Surfboard.create!(
-      user_id: rand(21..40),
+      user: User.all.sample,
       model: Faker::Movies::StarWars.character,
       price: rand(20..40),
       description: Faker::Quote.yoda,
