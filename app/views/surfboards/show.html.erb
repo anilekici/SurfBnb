@@ -1,10 +1,15 @@
 <div>
   <h2> <%= @surfboard.model %> </h2>
 
-  <ul>
+  <ul class="show-list">
     <li> Price: <%= @surfboard.price %> </li>
     <li> Description: <%= @surfboard.description %> </li>
     <li> Size: <%= @surfboard.size %> </li>
-    <li> <%= @surfboard.photo %> </li>
+    <li> <% if @surfboard.photo.attached? %>
+         <%= image_tag @surfboard.photo %>
+         <% else %>
+         <%= image_tag 'ART00050817001.jpg' %>
+         <% end %>
+    </li>
 </ul>
 </div>
