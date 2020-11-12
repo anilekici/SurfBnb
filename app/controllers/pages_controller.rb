@@ -4,4 +4,9 @@ class PagesController < ApplicationController
   def home
   end
 
+  def dashboard
+    @user = current_user
+    @my_bookings = @user.bookings
+  end
+
 end
