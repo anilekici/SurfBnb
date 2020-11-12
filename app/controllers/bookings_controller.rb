@@ -1,5 +1,9 @@
 class BookingsController < ApplicationController
 
+  def index
+    @user = User.find(params[:id])
+  end
+
   def new
     @booking = Booking.new
     @surfboard = Surfboard.find(params[:surfboard_id])
