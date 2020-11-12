@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   end
   resources :booking, only: :destroy
 
-  get '/users/:id/bookings', to: 'bookings#index', as: 'dashboard'
+  get '/dashboard', to: 'pages#dashboard'
 end
