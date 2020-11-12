@@ -7,4 +7,6 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :booking, only: :destroy
+
+  get '/users/:id/bookings', to: 'bookings#index', as: 'dashboard'
 end

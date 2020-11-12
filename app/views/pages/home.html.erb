@@ -4,7 +4,12 @@
     <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
   <div class= "flex">
     <h2>Welcome to SurfBnB!</h2>
-      <p class="mb-0"><%= link_to "Explore Surfboards", surfboards_path, class: "black-btn" %></p>
+
+    <p class="mb-0"><%= link_to "Explore Surfboards", surfboards_path, class: "black-btn" %></p>
+    <% unless current_user.nil? %>
+    <p><%= link_to "My Surfboards", dashboard_path(current_user) %></p>
+    <% end %>
+
   </div>
 </div>
 </div>
