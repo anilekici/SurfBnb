@@ -1,8 +1,15 @@
-.dash-container {
-  padding: 10px;
+.dash-container div {
+  border: 10px;
 }
 
-.dashboard-header h1 {
+.dashboard-header h2 {
   margin-left: auto;
   margin-right: auto;
+}
+
+.dash-btn {
+  display: flex;
+  align-text: center;
+  height: 200px;
+  border: 3px solid green;
 }
