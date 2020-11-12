@@ -3,7 +3,7 @@
     <%= image_tag "logo.png", alt: "logo", width: 50 %>
   </a>
   <%= link_to root_path do %>
-  <div class="navbar-brand" href="#">SurfBnB</div>
+  <div class="navbar-brand" href="#"><h2>SurfBnB</h2></div>
   <% end %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -26,15 +26,18 @@
           What do you want to do?
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <%= link_to surfboards_path do %>
-          <div class="dropdown-item">Rent a board</div>
-        <% end %>
-        <%= link_to new_surfboard_path do %>
-
-          <div class="dropdown-item">Share a board</div>
+          <%= link_to surfboards_path do %>
+            <div class="dropdown-item">Rent a board</div>
           <% end %>
-          <%# <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#"> <%= link_to root_path do %>
+
+          <%= link_to new_surfboard_path do %>
+            <div class="dropdown-item">Share a board</div>
+          <% end %>
+
+          <%= link_to surfboards_path do %>
+            <div class="dropdown-divider"></div>
+            <div class="dropdown-item">Dashboard</div>
+          <% end %>
         </div>
       </li>
     </ul>
