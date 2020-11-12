@@ -1,6 +1,10 @@
-<h1>I am a new booking</h1>
+<h1 class= "text-center">Pick the dates</h1>
 
-<%= simple_form_for [@surfboard, @booking] do |f| %>
-    <%= f.input :user_id %>
-    <%= f.submit %>
-<% end %>
+<div class="form-wrapper d-flex justify-content-around" >
+
+    <%= simple_form_for([@surfboard, @booking]) do|f| %>
+    <%= f.input :start_date, as: :date, label: "From:", wrapper_html: { class: "inline_field_wrapper" } %>
+    <%= f.input :end_date, as: :date, label: "To:".html_safe, wrapper_html: { class: "inline_field_wrapper" } %>
+    <%= f.submit "BOOK", class: "black-btn justify-content-center" %>
+    <% end %>
+</div>
