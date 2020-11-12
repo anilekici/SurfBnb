@@ -4,10 +4,12 @@
       <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
     <div class= "flex">
       <h2>Welcome to SurfBnB!</h2>
+      <div class="d-flex justify-content-around">
         <p class="mb-0"><%= link_to "Explore Surfboards", surfboards_path, class: "black-btn" %></p>
         <% if user_signed_in? %>
-          <p><%= link_to "My Surfboards", dashboard_path %></p>
+          <p class= "mb-0"><%= link_to "My Surfboards", dashboard_path, class: "black-btn" %></p>
         <% end %>
+      </div>
     </div>
   </div>
 </div>

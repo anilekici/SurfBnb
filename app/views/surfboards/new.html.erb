@@ -1,5 +1,5 @@
-<h2> 🏄 New Surfboard 🏄 </h2>
-
+<h2 class="text-center"> New Surfboard </h2>
+ 
 <div class="container">
 <%= simple_form_for @surfboard do |f| %>
 <%= f.input :model, placeholder: "longboard", input_html: { autocomplete: "off"} %>
@@ -9,6 +9,6 @@
 <%= f.input :photo, as: :file %>
 
 <%= link_to 'Cancel', surfboards_path, class: 'btn btn-outline-secondary' %>
-<%= f.submit class: 'btn btn-primary' %>
+<%= f.submit class: 'black-btn' %>
 <% end %>
 </div>
