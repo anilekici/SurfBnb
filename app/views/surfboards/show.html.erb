@@ -8,8 +8,8 @@
     <p><%= @surfboard.size %>, €<%= @surfboard.price %>/day </p>
   </div>
 
-  <div class="mini-nav">
-    <h2><%= link_to "Book Now!", new_surfboard_booking_path(@surfboard) %></h2>
+  <div class="flex">
+    <h2 class= "text-center"><%= link_to "Book Now!", new_surfboard_booking_path(@surfboard), class: "black-btn" %></h2>
   </div>
 
     <div class="show-image">
