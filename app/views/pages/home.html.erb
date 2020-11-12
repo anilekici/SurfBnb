@@ -2,14 +2,12 @@
   <div class="photo-card">
     <%= image_tag "background.jpg", class: "home_photo" %>
       <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-    <div class= "flex">
       <h2>Welcome to SurfBnB!</h2>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-around mb-5">
         <p class="mb-0"><%= link_to "Explore Surfboards", surfboards_path, class: "black-btn" %></p>
         <% if user_signed_in? %>
           <p class= "mb-0"><%= link_to "My Surfboards", dashboard_path, class: "black-btn" %></p>
         <% end %>
       </div>
-    </div>
   </div>
 </div>
