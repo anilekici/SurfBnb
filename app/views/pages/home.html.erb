@@ -1,10 +1,10 @@
-<body class= "banner">
+<div class= "banner">
 <div class="photo-card">
-  <%= image_tag "background.jpg", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_photo" %>
+  <%= image_tag "background.jpg", class: "home_photo" %>
     <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-  <div class= "container-fluid">
+  <div class= "flex">
     <h2>Welcome to SurfBnB!</h2>
-    <p><%= link_to "Explore Surfboards", surfboards_path %></p>
+      <p class="mb-0"><%= link_to "Explore Surfboards", surfboards_path, class: "black-btn" %></p>
   </div>
 </div>
-</body>
+</div>
