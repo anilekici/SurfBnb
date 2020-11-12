@@ -7,6 +7,7 @@
     top: 83px;
     z-index: -2;
     margin: auto;
+    height: 96%;
 }
 
 .photo-card h2, p {
@@ -14,14 +15,15 @@
     color: white;
     margin-top: 10%;
 }
-.photo-card a {
+a {
     text-decoration: none;
     color: white;
-    background-color: rgb(231, 86, 142);
-    padding: 10px;
-    opacity: 0.8;
-    border-radius: 4px;
 }
+//  
+//     background-color: rgb(231, 86, 142);
+//     padding: 10px;
+//     opacity: 0.8;
+//     border-radius: 4px;
 
 .photo-card {
     height: 80vh;
@@ -35,6 +37,9 @@
     width: 200px;
 }
 
-.container {
-    text-align: center;
+.flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
