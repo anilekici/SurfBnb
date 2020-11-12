@@ -1,4 +1,60 @@
-<h1>Welcome to your dashboard <%= @user.first_name %>!</h1>
-<ul>
-  <li><%= @user.surfboards.model %></li>
-</ul>
+
+<div class="dash-container">
+  <div class="dashboard-header">
+  <h1>Welcome to your dashboard <%= @user.first_name %>!</h1>
+  </div>
+
+
+  <div>
+    <div>
+    <h3> Your bookings </h3>
+    <% if @user.bookings.count != 0 %>
+      <% @user.bookings.each do |booking| %>
+        <ul>
+          <li> <%= booking %> </li>
+        </ul>
+      <% end %>
+    <% else %>
+      <ul>
+        <li> <%="You haven't booked any boards yet - book one and catch some waves! 🏄🌊" %> </li>
+      </ul>
+    <% end %>
+    </div>
+
+
+    <div>
+    <h3> Bookings on your boards </h3>
+
+    <% if @user.board_bookings.count != 0 %>
+      <% @user.board_bookings.each do |board_booking| %>
+        <ul>
+          <li> <%= board_booking.surfboard.model %></li>
+        </ul>
+      <% end %>
+    <% else %>
+      <ul>
+        <li> <%="None of your boards are booked at the moment!" %> </li>
+      </ul>
+    <% end %>
+
+    </div>
+
+
+    <div>
+    <h3> Your boards </h3>
+
+    <% if @user.surfboards.count != 0 %>
+      <% @user.surfboards.each do |surfboard| %>
+       <ul>
+        <li> <%= surfboard.model %>, €<%= surfboard.price %>/day </li>
+       </ul>
+      <% end %>
+    <% else %>
+      <ul>
+        <li> <%="You don't have any boards available to share at the moment" %> </li>
+      </ul>
+    <% end %>
+
+    </div>
+  </div>
+</div>
