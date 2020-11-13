@@ -3,7 +3,7 @@
     <%#= image_tag "background.jpg", class: "home_photo" %>
       <%= cl_video_tag "https://res.cloudinary.com/dbybfcjmu/video/upload/v1605263805/wave_tzxwic.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_photo" %>
       <h2>Welcome to SurfBnB!</h2>
-      <div class="d-flex justify-content-around">
+      <div class="d-flex justify-content-around mb-3">
         <p class="mb-0"><%= link_to "Find Surfboard", surfboards_path, class: "black-btn" %></p>
         <% if user_signed_in? %>
         <p class= "mb-0"><%= link_to "My Surfboards", dashboard_path, class: "black-btn" %></p>
