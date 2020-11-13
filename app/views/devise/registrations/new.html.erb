@@ -1,9 +1,9 @@
-<h2>Sign up</h2>
+<h2 class= "text-center">Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs">
+  <div class="form-inputs container">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -23,7 +23,7 @@
                 input_html: { autocomplete: "last_name" } %>
   </div>
 
-  <div class="form-actions">
+  <div class="form-actions black-btn">
     <%= f.button :submit, "Sign up" %>
   </div>
 <% end %>
