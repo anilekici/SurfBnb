@@ -1,4 +1,6 @@
 .dash-container div {
+  margin-left: 15px;
+  margin-right: 15px;
   border: 10px;
 }
 
@@ -10,6 +12,10 @@
 .dash-btn {
   display: flex;
   align-text: center;
-  height: 200px;
+  height: auto;
   border: 3px solid green;
+}
+
+.dash-section {
+  height: auto;
 }
