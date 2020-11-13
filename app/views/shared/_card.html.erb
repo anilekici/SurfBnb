@@ -1,4 +1,4 @@
-<% @surfboards.each do |surfboard| %>  
+<% @surfboards.each do |surfboard| %>
   <div class="card">
     <%= link_to surfboard_path(surfboard) do %>
       <% if surfboard.photo.attached? %>
