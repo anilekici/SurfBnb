@@ -1,3 +1,7 @@
 import flatpickr from "flatpickr";
 
-flatpickr(".datepicker", {});
+const flat_pickr = () => {
+  flatpickr(".datepicker", {});
+}
+
+export { flat_pickr }
