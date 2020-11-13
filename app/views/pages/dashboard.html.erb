@@ -5,8 +5,8 @@
   </div>
 
   <div class="dash-section">
-  <h3> Bookings on <%= @user.first_name %>'s boards </h3>
-
+  <h3 class= "text-center"> Bookings on <%= @user.first_name %>'s boards </h3>
+  
   <% if @user.board_bookings.count != 0 %>
     <% @user.board_bookings.each do |board_booking| %>
       <ul>
@@ -23,7 +23,7 @@
 
 
     <div class="dash-section">
-    <h3> <%= @user.first_name %>'s bookings </h3>
+    <h3 class= "text-center"> <%= @user.first_name %>'s bookings </h3>
     <% if @user.bookings.count != 0 %>
       <% @user.bookings.each do |booking| %>
         <ul>
@@ -37,13 +37,13 @@
         <li> <%="You haven't booked any boards yet - book one and catch some waves! 🏄🌊" %> </li>
       </ul>
     <% end %>
-    <div class="dash-btn">
+    <div>
       <p my=0><%= link_to "Explore Surfboards", surfboards_path, class: "sml-black-btn" %></p>
     </div>
   </div>
 
-    <div class="dash-section">
-    <h3> <%= @user.first_name %>'s boards </h3>
+    <div>
+    <h3 class= "text-center"> <%= @user.first_name %>'s boards </h3>
 
     <% if @user.surfboards.count != 0 %>
       <% @user.surfboards.each do |surfboard| %>
@@ -56,7 +56,7 @@
         <li> <%="You don't have any boards available to share at the moment" %> </li>
       </ul>
     <% end %>
-    <div class="dash-btn">
+    <div>
       <p my=0><%= link_to "Add a Board", new_surfboard_path, class: "sml-black-btn" %></p>
     </div>
     </div>

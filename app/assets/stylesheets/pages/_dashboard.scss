@@ -4,6 +4,12 @@
   border: 10px;
 }
 
+.dash-container ul {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+
+}
 .dashboard-header h2 {
   margin-left: auto;
   margin-right: auto;
@@ -12,10 +18,14 @@
 .dash-btn {
   display: flex;
   align-text: center;
-  height: auto;
-  border: 3px solid green;
+  border: 3px solid
+  
 }
 
 .dash-section {
   height: auto;
+}
+
+ul {
+  list-style-type: none;
 }
