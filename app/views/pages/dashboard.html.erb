@@ -4,13 +4,14 @@
     <h2><%= @user.first_name %>'s Dashboard</h2>
   </div>
 
-  <div>
+  <div class="dash-section">
   <h3> Bookings on <%= @user.first_name %>'s boards </h3>
 
   <% if @user.board_bookings.count != 0 %>
     <% @user.board_bookings.each do |board_booking| %>
       <ul>
         <li> <%= board_booking.surfboard.model %></li>
+        <li> <%= board_booking.booking.start_date %> - <%= board_booking.booking.end_date %></li>
       </ul>
     <% end %>
   <% else %>
@@ -21,8 +22,7 @@
   </div>
 
 
-  <div>
-    <div>
+    <div class="dash-section">
     <h3> <%= @user.first_name %>'s bookings </h3>
     <% if @user.bookings.count != 0 %>
       <% @user.bookings.each do |booking| %>
@@ -42,7 +42,7 @@
     </div>
   </div>
 
-    <div>
+    <div class="dash-section">
     <h3> <%= @user.first_name %>'s boards </h3>
 
     <% if @user.surfboards.count != 0 %>
@@ -60,5 +60,4 @@
       <p my=0><%= link_to "Add a Board", new_surfboard_path, class: "sml-black-btn" %></p>
     </div>
     </div>
-  </div>
 </div>
