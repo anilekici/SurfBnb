@@ -3,7 +3,7 @@
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
 
-  <div class="form-inputs container">
+  <div class="form-inputs ml-4 mr-4">
     <%= f.input :email,
                 required: true,
                 autofocus: true,
@@ -23,8 +23,8 @@
                 input_html: { autocomplete: "last_name" } %>
   </div>
 
-  <div class="form-actions black-btn">
-    <%= f.button :submit, "Sign up" %>
+  <div class="form-actions">
+    <%= f.button :submit, "Sign up", class: "sml-black-btn ml-4" %>
   </div>
 <% end %>
 
