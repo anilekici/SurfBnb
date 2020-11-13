@@ -10,8 +10,8 @@
   <% if @user.board_bookings.count != 0 %>
     <% @user.board_bookings.each do |board_booking| %>
       <ul>
-        <li> <%= board_booking.surfboard.model %></li>
-        <li> <%= board_booking.booking.start_date %> - <%= board_booking.booking.end_date %></li>
+        <li> board: <%= board_booking.surfboard.model %></li>
+        <li> by <%= board_booking.user.first_name %> from <%= board_booking.start_date %> to <%= board_booking.end_date %></li>
       </ul>
     <% end %>
   <% else %>
