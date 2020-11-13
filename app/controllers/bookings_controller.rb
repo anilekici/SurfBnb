@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @surfboard = Surfboard.find(params[:surfboard_id])
     @booking.surfboard_id = params[:surfboard_id]
     @booking.user = current_user
     if @booking.save
@@ -28,6 +29,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:users_id, :booking_id)
+    params.require(:booking).permit(:users_id, :booking_id, :start_date, :end_date)
   end
 end
