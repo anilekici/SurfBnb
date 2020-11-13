@@ -49,6 +49,15 @@
       <% @user.surfboards.each do |surfboard| %>
        <ul>
         <li> <%= surfboard.model %>, €<%= surfboard.price %>/day </li>
+        <li>     
+          <div class="show-image">
+            <% if surfboard.photo.attached? %>
+              <%= image_tag surfboard.photo %>
+            <% else %>
+              <%= image_tag 'ART00050817001.jpg' %>
+            <% end %>
+          </div> 
+        </li>
        </ul>
       <% end %>
     <% else %>
