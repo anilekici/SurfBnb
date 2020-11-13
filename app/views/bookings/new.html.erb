@@ -5,6 +5,8 @@
     <%= simple_form_for([@surfboard, @booking]) do|f| %>
     <%= f.input :start_date, as: :date, label: "From:", wrapper_html: { class: "inline_field_wrapper" } %>
     <%= f.input :end_date, as: :date, label: "To:".html_safe, wrapper_html: { class: "inline_field_wrapper" } %>
-    <%= f.submit "BOOK", class: "black-btn justify-content-center" %>
+
+    <%#= link_to 'Cancel', surfboard_path(@surfboard_id), class: "black-btn justify-content-center"'btn btn-outline-secondary' %>
+    <%= f.submit "BOOK !!!", class: "black-btn justify-content-center" %>
     <% end %>
 </div>
