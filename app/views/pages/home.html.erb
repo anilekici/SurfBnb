@@ -1,13 +1,13 @@
 <div class= "banner">
   <div class="photo-card">
     <%= image_tag "background.jpg", class: "home_photo" %>
-      <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_video" %>
-    <div class= "flex">
+      <%#= video_tag "wave.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "home_photo" %>
       <h2>Welcome to SurfBnB!</h2>
       <div class="d-flex justify-content-around">
         <p class="mb-0"><%= link_to "Find Surfboard", surfboards_path, class: "black-btn" %></p>
+        <% if user_signed_in? %>
         <p class= "mb-0"><%= link_to "My Surfboards", dashboard_path, class: "black-btn" %></p>
-        </div>
-    </div>
+        <% end %>
+      </div>
   </div>
 </div>
