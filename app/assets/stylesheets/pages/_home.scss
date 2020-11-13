@@ -34,3 +34,11 @@ a {
     justify-content: space-between;
     height: 90vh;
 }
+.banner a {
+    text-decoration: none;
+    opacity: 0.5;
+    color: white;
+}
+.banner a:hover {
+    opacity: 0.9;
+}

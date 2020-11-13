@@ -27,7 +27,9 @@
     <% if @user.bookings.count != 0 %>
       <% @user.bookings.each do |booking| %>
         <ul>
-          <li> <%= booking %> </li>
+          <li>Model: <%= booking.surfboard.model %> </li>
+          <li>From: <%= booking.start_date %> </li>
+          <li>To: <%= booking.end_date %> </li>
         </ul>
       <% end %>
     <% else %>
