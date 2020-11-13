@@ -1,15 +1,19 @@
 .black-btn {
     background-color: black;
-    padding: 15px;
-    border: unset;
     color: white;
-    font-weight: bolder;
-    border-radius: 40px;
-    text-shadow: 1px 1px 3px #FFB060;
-    transition: background 0.3s ease;
+    // border-color: #343a40;
     display: inline-block;
-    margin-top: 15px;
-    justify-content: center;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: none;
+    border: 1px solid;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 40px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 .sml-black-btn {
@@ -24,4 +28,21 @@
     transition: background 0.3s ease;
     display: inline-block;
     text-align: center;
+}
+
+.cnl-btn {
+    color: #343a40;
+    border-color: #343a40;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    background-color: none;
+    border: 1px solid;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 40px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
